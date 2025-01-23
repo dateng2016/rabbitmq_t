@@ -54,7 +54,8 @@ public class SprintAmqpTest {
     void sendTopic() {
         String exchangeName = "hmall.topic";
         String msg = "Hello, everyone, this is a TOPIC message";
-        rabbitTemplate.convertAndSend(exchangeName, "japan.news", msg);
+        String weatherMsg = "Hi, this is a WEATHER message";
+//        rabbitTemplate.convertAndSend(exchangeName, "japan.news", msg);
+        rabbitTemplate.convertAndSend(exchangeName, "china.weather", weatherMsg);
     }
-
 }
