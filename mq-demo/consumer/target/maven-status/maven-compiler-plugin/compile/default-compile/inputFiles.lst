@@ -1,2 +1,4 @@
 /home/da/coding/tutorials/rabbitmq/mq-demo/consumer/src/main/java/com/itheima/consumer/listeners/MqListener.java
+/home/da/coding/tutorials/rabbitmq/mq-demo/consumer/src/main/java/com/itheima/consumer/config/FanoutConfiguration.java
+/home/da/coding/tutorials/rabbitmq/mq-demo/consumer/src/main/java/com/itheima/consumer/config/DirectConfiguration.java
 /home/da/coding/tutorials/rabbitmq/mq-demo/consumer/src/main/java/com/itheima/consumer/ConsumerApplication.java

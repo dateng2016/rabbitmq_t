@@ -4,10 +4,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.ApplicationContext;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @SpringBootTest
-public class SprintAmqpTest {
+public class SpringAmqpTest {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
@@ -57,5 +59,13 @@ public class SprintAmqpTest {
         String weatherMsg = "Hi, this is a WEATHER message";
         // rabbitTemplate.convertAndSend(exchangeName, "japan.news", msg);
         rabbitTemplate.convertAndSend(exchangeName, "china.weather", weatherMsg);
+    }
+
+    @Test
+    void sendObject() {
+        Map<String, Object> msg = new HashMap<>(2);
+        msg.put("name", "jack");
+        msg.put("age", 81);
+        rabbitTemplate.convertAndSend("object.queue",msg);
     }
 }
