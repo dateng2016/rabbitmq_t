@@ -35,7 +35,7 @@ public class SprintAmqpTest {
         String exchangeName = "hmall.fanout";
 
         String msg = "Hello, everyone, this is a FANOUT message";
-        rabbitTemplate.convertAndSend(exchangeName, null, msg);
+        rabbitTemplate.convertAndSend(exchangeName, "", msg);
         // NOTE: Since we are sending the message to an EXCHANGE, there should
         // be an extra argument of 'routingKey'.
     }
@@ -55,7 +55,7 @@ public class SprintAmqpTest {
         String exchangeName = "hmall.topic";
         String msg = "Hello, everyone, this is a TOPIC message";
         String weatherMsg = "Hi, this is a WEATHER message";
-//        rabbitTemplate.convertAndSend(exchangeName, "japan.news", msg);
+        // rabbitTemplate.convertAndSend(exchangeName, "japan.news", msg);
         rabbitTemplate.convertAndSend(exchangeName, "china.weather", weatherMsg);
     }
 }
