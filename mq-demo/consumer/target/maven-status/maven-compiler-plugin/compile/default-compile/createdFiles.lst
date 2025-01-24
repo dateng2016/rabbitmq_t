@@ -1,2 +1,3 @@
 com/itheima/consumer/ConsumerApplication.class
 com/itheima/consumer/listeners/MqListener.class
+com/itheima/consumer/config/FanoutConfiguration.class
